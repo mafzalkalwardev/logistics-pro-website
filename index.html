@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogisticsPro - Professional Logistics & Shipping Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">📦</span>
+                <span class="logo-text">LogisticsPro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tracking">Tracking</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Logistics Solutions for Global Commerce</h1>
+                <p>Reliable, fast, and cost-effective shipping and logistics services worldwide</p>
+                <button class="btn btn-primary" onclick="scrollToSection('tracking')">Track Your Shipment</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Get Quote</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>50K+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat">
+                    <h3>2M+</h3>
+                    <p>Shipments</p>
+                </div>
+                <div class="stat">
+                    <h3>150+</h3>
+                    <p>Countries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive logistics solutions tailored to your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Ground Shipping</h3>
+                    <p>Fast and reliable domestic ground transportation with real-time tracking and flexible delivery options.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Air Freight</h3>
+                    <p>Express air cargo services for time-sensitive shipments. Get your goods delivered worldwide in days.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚢</div>
+                    <h3>Ocean Freight</h3>
+                    <p>Cost-effective international ocean shipping. Full container loads (FCL) and less than container loads (LCL).</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>Warehouse</h3>
+                    <p>Secure storage and inventory management. Climate-controlled facilities in strategic locations.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Customs Clearance</h3>
+                    <p>Expert customs documentation and clearance services to expedite international shipments.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Returns Management</h3>
+                    <p>Efficient reverse logistics and returns management for e-commerce and retail businesses.</p>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Section -->
+    <section id="tracking" class="tracking">
+        <div class="container">
+            <h2>Track Your Shipment</h2>
+            <p class="section-subtitle">Real-time tracking for all your shipments</p>
+            
+            <div class="tracking-form">
+                <input type="text" id="trackingInput" placeholder="Enter your tracking number" maxlength="20">
+                <button onclick="trackShipment()" class="btn btn-primary">Track</button>
+            </div>
+
+            <div id="trackingResult" class="tracking-result hidden">
+                <div class="tracking-info">
+                    <div class="tracking-header">
+                        <h3 id="trackingId"></h3>
+                        <span id="trackingStatus" class="status-badge"></span>
+                    </div>
+                    
+                    <div class="tracking-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <h4>Order Received</h4>
+                                <p id="timelineDate1"></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <h4>In Transit</h4>
+                                <p id="timelineDate2"></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" id="dot3"></div>
+                            <div class="timeline-content">
+                                <h4>Out for Delivery</h4>
+                                <p id="timelineDate3"></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" id="dot4"></div>
+                            <div class="timeline-content">
+                                <h4>Delivered</h4>
+                                <p id="timelineDate4"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-details">
+                        <div class="detail-item">
+                            <span class="label">From:</span>
+                            <span class="value">New York, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">To:</span>
+                            <span class="value" id="destination">Los Angeles, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Estimated Delivery:</span>
+                            <span class="value" id="estimatedDelivery">May 15, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <p class="section-subtitle">Flexible pricing for businesses of all sizes</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="price"><span class="currency">$</span>499<span class="period">/month</span></p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 100 shipments/month</li>
+                        <li>✓ Basic tracking</li>
+                        <li>✓ Ground shipping only</li>
+                        <li>✓ Standard support</li>
+                        <li>✗ Customs clearance</li>
+                        <li>✗ Warehouse access</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="subscribeToPrice('Starter')">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <p class="price"><span class="currency">$</span>1,299<span class="period">/month</span></p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited shipments</li>
+                        <li>✓ Advanced tracking & analytics</li>
+                        <li>✓ Ground + Air shipping</li>
+                        <li>✓ Priority support (24/7)</li>
+                        <li>✓ Customs clearance included</li>
+                        <li>✗ Warehouse access</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="subscribeToPrice('Professional')">Subscribe Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="price"><span>Custom</span></p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited everything</li>
+                        <li>✓ All shipping methods</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ Premium 24/7 support</li>
+                        <li>✓ Customs & compliance</li>
+                        <li>✓ Warehouse services</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>Shipping Calculator</h2>
+            <p class="section-subtitle">Get an instant quote for your shipment</p>
+            
+            <div class="calculator-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="weight">Weight (lbs)</label>
+                        <input type="number" id="weight" placeholder="Enter weight" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="distance">Distance (miles)</label>
+                        <input type="number" id="distance" placeholder="Enter distance" min="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="shippingType">Shipping Type</label>
+                        <select id="shippingType">
+                            <option value="ground">Ground Shipping (+$0)</option>
+                            <option value="express">Express Shipping (+$50)</option>
+                            <option value="air">Air Freight (+$150)</option>
+                            <option value="ocean">Ocean Freight (+$200)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">Add Insurance?</label>
+                        <select id="insurance">
+                            <option value="no">No (+$0)</option>
+                            <option value="yes">Yes (+5%)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="calculateQuote()" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Calculate Quote</button>
+
+                <div id="quoteResult" class="quote-result hidden">
+                    <div class="quote-box">
+                        <h3>Your Shipping Quote</h3>
+                        <div class="quote-breakdown">
+                            <div class="quote-item">
+                                <span>Base Rate</span>
+                                <span id="baseRate">$0.00</span>
+                            </div>
+                            <div class="quote-item">
+                                <span>Shipping Method</span>
+                                <span id="methodCost">$0.00</span>
+                            </div>
+                            <div class="quote-item">
+                                <span>Insurance</span>
+                                <span id="insuranceCost">$0.00</span>
+                            </div>
+                            <div class="quote-item total">
+                                <span>Total</span>
+                                <span id="totalCost">$0.00</span>
+                            </div>
+                        </div>
+                        <button onclick="requestQuote()" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Request This Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p class="section-subtitle">Meet the experts behind LogisticsPro</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">👨‍💼</div>
+                    <h3>John Richardson</h3>
+                    <p class="position">CEO & Founder</p>
+                    <p class="bio">20+ years in logistics industry with expertise in supply chain optimization.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">👩‍💼</div>
+                    <h3>Sarah Mitchell</h3>
+                    <p class="position">Operations Director</p>
+                    <p class="bio">Expert in warehouse management and international shipping regulations.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">👨‍💻</div>
+                    <h3>Michael Chen</h3>
+                    <p class="position">Tech Lead</p>
+                    <p class="bio">Leading innovation in logistics technology and real-time tracking systems.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">👩‍💻</div>
+                    <h3>Emma Rodriguez</h3>
+                    <p class="position">Customer Success Manager</p>
+                    <p class="bio">Dedicated to ensuring maximum satisfaction for all our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p class="section-subtitle">Real feedback from companies we've helped</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"LogisticsPro has transformed our supply chain management. Their tracking system is incredibly accurate and their support team is always responsive."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <p>CEO, TechStore Inc</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Affordable pricing, reliable service, and excellent customer support. We've been with them for 3 years and couldn't ask for a better logistics partner."</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Torres</strong>
+                        <p>Operations Manager, Global Retail Co</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The shipping calculator and quote system saved us hours of manual work. Their international expertise is unmatched in the industry."</p>
+                    <div class="testimonial-author">
+                        <strong>Lisa Wang</strong>
+                        <p>Logistics Coordinator, Export Solutions</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"We handle 500+ shipments monthly and LogisticsPro manages them all seamlessly. Their technology is state-of-the-art and pricing is competitive."</p>
+                    <div class="testimonial-author">
+                        <strong>David Park</strong>
+                        <p>Supply Chain Director, FastShip E-commerce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Latest Insights</h2>
+            <p class="section-subtitle">Industry news and expert tips</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">📚</div>
+                    <div class="blog-date">May 8, 2026</div>
+                    <h3>5 Ways to Optimize Your Supply Chain</h3>
+                    <p>Learn proven strategies to reduce costs and improve efficiency in your logistics operations.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🌍</div>
+                    <div class="blog-date">May 6, 2026</div>
+                    <h3>International Shipping: 2026 Regulations Update</h3>
+                    <p>Stay compliant with the latest customs regulations and international shipping requirements.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">📈</div>
+                    <div class="blog-date">May 4, 2026</div>
+                    <h3>E-commerce Growth: Logistics Challenges & Solutions</h3>
+                    <p>Discover how to scale your logistics operations to meet growing e-commerce demands.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🚚</div>
+                    <div class="blog-date">May 1, 2026</div>
+                    <h3>Last-Mile Delivery: The Future of Logistics</h3>
+                    <p>Explore innovative approaches to final-mile delivery in the modern logistics landscape.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">💡</div>
+                    <div class="blog-date">Apr 28, 2026</div>
+                    <h3>Warehouse Automation: ROI and Best Practices</h3>
+                    <p>Learn how automation can boost your warehouse efficiency and reduce operational costs.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🔐</div>
+                    <div class="blog-date">Apr 25, 2026</div>
+                    <h3>Secure Shipping: Protecting Your High-Value Cargo</h3>
+                    <p>Essential tips for ensuring the safety and security of valuable shipments in transit.</p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Ready to optimize your logistics? Contact us today</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Address</h3>
+                        <p>123 Commerce Street<br>New York, NY 10001<br>USA</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p>+1 (800) 123-4567<br>Mon-Fri: 9AM - 6PM EST</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@logisticspro.com<br>support@logisticspro.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕐 Hours</h3>
+                        <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Company Name" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="ground">Ground Shipping</option>
+                            <option value="air">Air Freight</option>
+                            <option value="ocean">Ocean Freight</option>
+                            <option value="warehouse">Warehouse</option>
+                            <option value="customs">Customs Clearance</option>
+                            <option value="returns">Returns Management</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell us about your shipping needs..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About LogisticsPro</h4>
+                    <p>Leading global logistics provider with 20+ years of industry experience and expertise.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tracking">Tracking</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LogisticsPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
