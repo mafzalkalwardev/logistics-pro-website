@@ -1,57 +1,70 @@
 <div align="center">
 
-# LogisticsPro Website
+# Logistics Pro Website
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=26&duration=2800&pause=700&color=0EA5E9&center=true&vCenter=true&width=900&lines=Professional+Logistics+%26+Shipping+Website;Real-time+Tracking+%2B+Quote+Calculator;Responsive+Vanilla+HTML+CSS+JavaScript" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=28&duration=2800&pause=700&color=0B1F3A&center=true&vCenter=true&width=900&lines=Professional+Logistics+Website;Tracking+%2B+Quote+Calculator;Pricing+Tiers+%2B+Responsive+UI;Vanilla+HTML+%2F+CSS+%2F+JS" alt="Typing SVG" />
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Responsive-Design-22C55E?style=for-the-badge" alt="Responsive" />
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT" />
+  <img src="https://komarev.com/ghpvc/?username=mafzalkalwardev&label=Project%20Views&color=0b1f3a&style=for-the-badge" alt="Project views" />
+  <img src="https://img.shields.io/github/stars/mafzalkalwardev/logistics-pro-website?style=for-the-badge&color=22c55e" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/forks/mafzalkalwardev/logistics-pro-website?style=for-the-badge&color=f59e0b" alt="GitHub forks" />
+  <img src="https://img.shields.io/github/license/mafzalkalwardev/logistics-pro-website?style=for-the-badge&color=64748b" alt="License" />
+</p>
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js" alt="Skill icons" />
+</p>
+
+<p>
+  <strong>Professional logistics website with tracking, quote calculator, pricing tiers, and responsive vanilla HTML/CSS/JS.</strong>
 </p>
 
 </div>
 
 ---
 
-## Project Showcase
+## Trophy Cards
 
-**LogisticsPro** is a professional logistics and shipping website demo built with vanilla HTML, CSS, and JavaScript. It includes shipment tracking, a dynamic quote calculator, pricing tiers, services showcase, testimonials, blog preview, and a contact form — fully responsive for mobile, tablet, and desktop.
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=mafzalkalwardev&theme=algolia&no-frame=true&no-bg=true&margin-w=12&margin-h=12&column=4" alt="GitHub trophy cards" />
+</div>
 
-Built by **Muhammad Afzal Kalwar** as a portfolio-ready static web project for logistics and transport businesses.
+---
 
-## Live Preview
+## Stats Cards
 
-| | |
-|---|---|
-| **GitHub Pages** | https://mafzalkalwardev.github.io/logistics-pro-website/ |
-| **Repository** | [github.com/mafzalkalwardev/logistics-pro-website](https://github.com/mafzalkalwardev/logistics-pro-website) |
+<div align="center">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=mafzalkalwardev&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats" />
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=mafzalkalwardev&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
+</div>
 
-## Screenshots
+---
 
-| Homepage | Mobile |
-|---|---|
-| ![Homepage](./docs/screenshots/homepage.png) | ![Mobile](./docs/screenshots/mobile.png) |
+## Activity Graph
 
-## Key Features
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mafzalkalwardev&theme=react-dark&hide_border=true&area=true" alt="GitHub activity graph" />
+</div>
 
-- Sticky navigation with mobile menu toggle
-- Hero section with key statistics
-- Six logistics service cards
-- Interactive shipment tracking timeline
-- Three pricing tiers (Starter, Professional, Enterprise)
-- Shipping quote calculator (weight, distance, method)
-- Team, testimonials, and blog sections
-- Contact form with validation
-- Smooth scroll and scroll animations
+---
 
-## Tech Stack
+## Contribution Snake
 
-- HTML5, CSS3, JavaScript (no framework)
-- CSS Grid & Flexbox
-- Mobile-first responsive design
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mafzalkalwardev/google-voice-dispatch-agent/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mafzalkalwardev/google-voice-dispatch-agent/output/github-contribution-grid-snake.svg">
+    <img alt="Contribution snake" src="https://raw.githubusercontent.com/mafzalkalwardev/google-voice-dispatch-agent/output/github-contribution-grid-snake.svg">
+  </picture>
+</div>
+
+---
+
+## SEO Keywords
+
+`logistics website` `quote calculator` `tracking page`
+
+---
 
 ## Quick Start
 
